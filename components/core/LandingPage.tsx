@@ -8,11 +8,11 @@ const theme = createTheme({
     mode: "light",
     primary: {
       main: "#5D3AB7",
-      contrastText: "#FFFFFF",
+      contrastText: "#000000",
     },
     text: {
-      primary: "#FFFFFF",
-      secondary: "#FFFFFF",
+      primary: "#000000",
+      secondary: "#000000",
     },
   },
 });
