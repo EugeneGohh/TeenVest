@@ -57,6 +57,8 @@ function NavBar() {
   const [open, setOpen] = React.useState(false);
   const matches = useMediaQuery("(max-width:600px)");
 
+  const title = ["Courses", "Our Leaners", "Contact", "Log In", "Sign Up"];
+
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -107,13 +109,11 @@ function NavBar() {
           </DrawerHeader>
           <Divider />
           <List>
-            {["Courses", "Our Leaners", "Contact", "Log In", "Sign Up"].map(
-              (text) => (
-                <ListItem button key={text}>
-                  <ListItemText primary={text} />
-                </ListItem>
-              )
-            )}
+            {title.map((text) => (
+              <ListItem button key={text}>
+                <ListItemText primary={text} />
+              </ListItem>
+            ))}
           </List>
         </Drawer>
       </Box>
@@ -129,11 +129,11 @@ function NavBar() {
             TeenVest
           </Typography>
 
-          <Button color="inherit">Courses</Button>
-          <Button color="inherit">Our Learners</Button>
-          <Button color="inherit">Contact</Button>
-          <Button color="inherit">Log In</Button>
-          <Button color="inherit">Sign Up</Button>
+          {title.map((text) => (
+            <Button color="inherit" key={text}>
+              {text}
+            </Button>
+          ))}
         </Toolbar>
       </AppBar>
     </Box>
