@@ -10,6 +10,7 @@ import {
   List,
   ListItem,
   ListItemText,
+  Stack,
   useMediaQuery,
   styled,
   useTheme,
@@ -54,7 +55,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 function NavBar() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-  const matches = useMediaQuery("(max-width:600px)");
+  const matches = useMediaQuery("(max-width:750px)");
 
   const title = ["Courses", "Our Leaners", "Contact", "Log In", "Sign Up"];
 
@@ -128,9 +129,11 @@ function NavBar() {
           </Typography>
 
           {title.map((text) => (
-            <Button color="inherit" key={text}>
-              {text}
-            </Button>
+            <Stack m={0.5} key={text}>
+              <Button color="secondary" variant="contained">
+                {text}
+              </Button>
+            </Stack>
           ))}
         </Toolbar>
       </AppBar>
