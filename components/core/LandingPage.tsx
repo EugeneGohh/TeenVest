@@ -1,6 +1,7 @@
 import React from "react";
-import NavBar from "./NavBar";
 import { createTheme, ThemeProvider, CssBaseline } from "@material-ui/core";
+import NavBar from "./NavBar";
+import Body from "./Body";
 import "@fontsource/roboto/400.css";
 
 const theme = createTheme({
@@ -21,6 +22,7 @@ function LandingPage() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <NavBar />
+      <Body />
     </ThemeProvider>
   );
 }
