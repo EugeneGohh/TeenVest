@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { styled } from "@material-ui/core/styles";
 import {
   Container,
   Grid,
