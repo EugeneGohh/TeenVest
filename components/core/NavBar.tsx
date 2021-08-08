@@ -55,7 +55,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 function NavBar() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-  const matches = useMediaQuery("(max-width:750px)");
+  const matches = useMediaQuery("(max-width: 950px)");
 
   const title = ["Courses", "Our Leaners", "Contact", "Log In", "Sign Up"];
 
@@ -130,9 +130,7 @@ function NavBar() {
 
           {title.map((text) => (
             <Stack m={0.5} key={text}>
-              <Button color="secondary" variant="contained">
-                {text}
-              </Button>
+              <Button color="secondary">{text}</Button>
             </Stack>
           ))}
         </Toolbar>
