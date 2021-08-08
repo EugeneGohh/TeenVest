@@ -2,7 +2,6 @@ import Image from "next/image";
 import {
   Container,
   Grid,
-  Paper,
   Box,
   Typography,
   useMediaQuery,
