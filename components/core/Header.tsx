@@ -20,14 +20,8 @@ function Header() {
             height: "550px",
           }}
         >
-          <Grid
-            container
-            spacing={{ xs: 2, md: 3 }}
-            columns={{ xs: 4, sm: 8, md: 12 }}
-            textAlign="center"
-            justifyContent="center"
-          >
-            <Grid item xs={6} sm={10}>
+          <Grid container textAlign="center" justifyContent="center">
+            <Grid item sm={6} md={10}>
               <Typography variant="h3">
                 Democratizing Financial Education across Malaysia
               </Typography>
@@ -40,7 +34,7 @@ function Header() {
               </Typography>
             </Grid>
 
-            <Grid item xs={5} sm={6}>
+            <Grid item sm={8}>
               <Image
                 src={Finance}
                 alt="Ticker image"
@@ -60,14 +54,13 @@ function Header() {
         sx={{
           bgcolor: "#5D3AB7",
           height: "550px",
+          display: "grid",
+          columnGap: "2",
+          gridTemplateColumns: "1fr",
         }}
       >
-        <Grid
-          container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
-        >
-          <Grid item md={5} lg={4} m={15}>
+        <Grid container justifyContent="center" my={12}>
+          <Grid item xs={2} md={5} py={6}>
             <Typography variant="h3">
               Democratizing Financial Education across Malaysia
             </Typography>
@@ -80,7 +73,7 @@ function Header() {
             </Typography>
           </Grid>
 
-          <Grid item md={4} lg={4} mt={10}>
+          <Grid item md={4} py={2}>
             <Image src={Finance} alt="Ticker image" width={750} height={450} />
           </Grid>
         </Grid>
