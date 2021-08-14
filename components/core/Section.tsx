@@ -26,7 +26,7 @@ function Section() {
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
-          <Grid item xs container direction="column" spacing={2}>
+          <Grid item xs container direction="column">
             <Grid item xs>
               <Item>
                 <Typography gutterBottom variant="subtitle1" component="div">
