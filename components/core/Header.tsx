@@ -13,7 +13,7 @@ function Header() {
 
   if (resize) {
     return (
-      <Container maxWidth="xl" disableGutters>
+          <Container maxWidth="xl" disableGutters>
         <Box
           sx={{
             bgcolor: "#5D3AB7",
