@@ -2,7 +2,7 @@ import React from "react";
 import { createTheme, ThemeProvider, CssBaseline } from "@material-ui/core";
 import NavBar from "./NavBar";
 import Header from "./Header";
-import Section from "./Section";
+import Category from "./Category";
 import "@fontsource/roboto/400.css";
 
 const theme = createTheme({
@@ -74,7 +74,7 @@ function LandingPage() {
       <CssBaseline />
       <NavBar />
       <Header />
-      <Section />
+      <Category />
     </ThemeProvider>
   );
 }
