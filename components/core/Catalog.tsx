@@ -54,7 +54,7 @@ const coursesCard = (
   </Card>
 );
 
-function Section() {
+function Catalog() {
   return (
     <Container maxWidth="xl" disableGutters>
       <Box
@@ -97,4 +97,4 @@ function Section() {
   );
 }
 
-export default Section;
+export default Catalog;
