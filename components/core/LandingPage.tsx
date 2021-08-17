@@ -3,6 +3,7 @@ import { createTheme, ThemeProvider, CssBaseline } from "@material-ui/core";
 import NavBar from "./NavBar";
 import Header from "./Header";
 import Catalog from "./Catalog";
+import Courses from "./Courses";
 import "@fontsource/roboto/400.css";
 
 const theme = createTheme({
@@ -75,6 +76,7 @@ function LandingPage() {
       <NavBar />
       <Header />
       <Catalog />
+      <Courses />
     </ThemeProvider>
   );
 }

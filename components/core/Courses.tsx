@@ -11,27 +11,6 @@ import {
   CardMedia,
 } from "@material-ui/core";
 
-const marketCard = (
-  <Card sx={{ maxWidth: 345 }}>
-    <CardMedia
-      sx={{ height: 320 }}
-      image="https://res.cloudinary.com/dfkd65uqz/image/upload/v1629163214/Bear_market-amico_hkjxv5.png"
-      title="Market"
-    />
-    <CardContent>
-      <Typography gutterBottom variant="h5" component="div">
-        Market
-      </Typography>
-      <Typography variant="body2" color="text.secondary">
-        Market for open for everyone under parents provision.
-      </Typography>
-    </CardContent>
-    <CardActions>
-      <Button size="small">Learn More</Button>
-    </CardActions>
-  </Card>
-);
-
 const coursesCard = (
   <Card sx={{ maxWidth: 345 }}>
     <CardMedia
@@ -72,7 +51,7 @@ function Catalog() {
           alignItems="center"
         >
           <Grid item py={5}>
-            <Typography variant="h3">Catalog</Typography>
+            <Typography variant="h3">Courses</Typography>
           </Grid>
         </Grid>
 
@@ -84,13 +63,11 @@ function Catalog() {
           rowSpacing={5}
           columnSpacing={{ xs: 1, sm: 2, md: 10 }}
         >
-          <Grid item>
-            <Card>{marketCard}</Card>
-          </Grid>
-
-          <Grid item>
-            <Card>{coursesCard}</Card>
-          </Grid>
+          {Array.from(Array(5)).map((index) => (
+            <Grid item key={index}>
+              <Card>{coursesCard}</Card>
+            </Grid>
+          ))}
         </Grid>
       </Box>
     </Container>
