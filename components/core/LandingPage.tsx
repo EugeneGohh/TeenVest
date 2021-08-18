@@ -4,6 +4,7 @@ import NavBar from "./NavBar";
 import Header from "./Header";
 import Catalog from "./Catalog";
 import Courses from "./Courses";
+import Testimonial from "./Testimonial";
 import "@fontsource/roboto/400.css";
 
 const theme = createTheme({
@@ -77,6 +78,7 @@ function LandingPage() {
       <Header />
       <Catalog />
       <Courses />
+      <Testimonial />
     </ThemeProvider>
   );
 }
