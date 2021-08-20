@@ -99,7 +99,7 @@ function Testimonial() {
           columnSpacing={{ xs: 1, sm: 2, md: 3 }}
         >
           {Array.from(Array(2)).map((index) => (
-            <Grid item key={index}>
+            <Grid item key={index} py={5}>
               <div>{testimonialCard}</div>
             </Grid>
           ))}
