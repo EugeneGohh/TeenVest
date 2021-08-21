@@ -5,9 +5,18 @@ import Header from "./Header";
 import Catalog from "./Catalog";
 import Courses from "./Courses";
 import Testimonial from "./Testimonial";
+import Footer from "./Footer";
 import "@fontsource/roboto/400.css";
 
 const theme = createTheme({
+  components: {
+    MuiButtonBase: {
+      defaultProps: {
+        // The props to change the default for.
+        disableRipple: true, // No more ripple!
+      },
+    },
+  },
   palette: {
     mode: "light",
     primary: {
@@ -79,6 +88,7 @@ function LandingPage() {
       <Catalog />
       <Courses />
       <Testimonial />
+      <Footer />
     </ThemeProvider>
   );
 }
