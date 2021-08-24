@@ -22,7 +22,7 @@ let theme = createTheme({
       main: "#0F0E17",
       light: "#42a5f5",
       dark: "#1565co",
-      contrastText: "#FFFFFF",
+      contrastText: "##0f0e17",
     },
     secondary: {
       main: "#FFFFFF",
