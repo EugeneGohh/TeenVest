@@ -1,22 +1,17 @@
 import React from "react";
-import { createTheme, ThemeProvider, CssBaseline } from "@material-ui/core";
+import {
+  createTheme,
+  ThemeProvider,
+  CssBaseline,
+  responsiveFontSizes,
+} from "@material-ui/core";
 import NavBar from "./NavBar";
 import Header from "./Header";
 import Catalog from "./Catalog";
-import Courses from "./Courses";
-import Testimonial from "./Testimonial";
 import Footer from "./Footer";
 import "@fontsource/roboto/400.css";
 
-const theme = createTheme({
-  components: {
-    MuiButtonBase: {
-      defaultProps: {
-        // The props to change the default for.
-        disableRipple: true, // No more ripple!
-      },
-    },
-  },
+let theme = createTheme({
   palette: {
     mode: "light",
     common: {
@@ -24,7 +19,7 @@ const theme = createTheme({
       white: "#fff",
     },
     primary: {
-      main: "#5D3AB7",
+      main: "#0F0E17",
       light: "#42a5f5",
       dark: "#1565co",
       contrastText: "#FFFFFF",
@@ -36,8 +31,8 @@ const theme = createTheme({
       contrastText: "#fff",
     },
     text: {
-      primary: "#000000",
-      secondary: "#000000",
+      primary: "#FFF",
+      secondary: "#FFF",
       disabled: "#000",
     },
   },
@@ -51,22 +46,22 @@ const theme = createTheme({
     fontWeightBold: 700,
     h1: {
       fontFamily: "Proxima Nova",
-      fontWeight: 300,
-      fontSize: "3rem",
+      fontWeight: 500,
+      fontSize: "3.85rem",
       lineHeight: 1.167,
       letterSpacing: "-0.01562em",
     },
     h2: {
       fontFamily: "Proxima Nova",
       fontWeight: 300,
-      fontSize: "2.75rem",
+      fontSize: "3.75rem",
       lineHeight: 1.167,
       letterSpacing: "-0.01562em",
     },
     h3: {
       fontFamily: "Proxima Nova",
       fontWeight: 400,
-      fontSize: "2.40rem",
+      fontSize: "3rem",
       lineHeight: 1.167,
       letterSpacing: "0em",
     },
@@ -87,7 +82,7 @@ const theme = createTheme({
     subtitle1: {
       fontFamily: "Proxima Nova",
       fontWeight: 400,
-      fontSize: "1rem",
+      fontSize: "1.05rem",
       lineHeight: 1.75,
       letterSpacing: "0.00938em",
     },
@@ -138,6 +133,8 @@ const theme = createTheme({
   },
 });
 
+theme = responsiveFontSizes(theme);
+
 function LandingPage() {
   return (
     <ThemeProvider theme={theme}>
@@ -145,8 +142,6 @@ function LandingPage() {
       <NavBar />
       <Header />
       <Catalog />
-      <Courses />
-      <Testimonial />
       <Footer />
     </ThemeProvider>
   );

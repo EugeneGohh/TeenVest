@@ -4,9 +4,7 @@ import {
   Box,
   Typography,
   Grid,
-  Paper,
   Button,
-  InputBase,
 } from "@material-ui/core";
 import { AiFillFacebook, AiFillGithub, AiFillYoutube } from "react-icons/ai";
 
@@ -49,23 +47,6 @@ function Footer() {
             <Typography variant="h6">Subscribe to our newsletter?</Typography>
 
             <br />
-
-            <Paper
-              component="form"
-              sx={{
-                p: "2px 4px",
-                display: "flex",
-                alignItems: "center",
-                width: 400,
-              }}
-            >
-              <InputBase
-                sx={{ ml: 1, flex: 1 }}
-                placeholder="email@example.com"
-                inputProps={{ "aria-label": "Your Email" }}
-              />
-              <Button variant="contained">Submit</Button>
-            </Paper>
           </Grid>
         </Grid>
       </Box>
