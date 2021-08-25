@@ -21,11 +21,11 @@ let theme = createTheme({
     primary: {
       main: "#0F0E17",
       light: "#42a5f5",
-      dark: "#1565co",
+      dark: "#ff8906",
       contrastText: "##0f0e17",
     },
     secondary: {
-      main: "#FFFFFF",
+      main: "#ff8906",
       light: "#ba68c8",
       dark: "#7b1fa2",
       contrastText: "#fff",
@@ -61,7 +61,7 @@ let theme = createTheme({
     h3: {
       fontFamily: "Proxima Nova",
       fontWeight: 400,
-      fontSize: "3rem",
+      fontSize: "2.45rem",
       lineHeight: 1.167,
       letterSpacing: "0em",
     },
