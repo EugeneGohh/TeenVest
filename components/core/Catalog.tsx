@@ -1,15 +1,13 @@
 import React from "react";
-import {
-  Container,
-  Box,
-  Grid,
-  Typography,
-  CardActions,
-  CardContent,
-  Card,
-  Button,
-  CardMedia,
-} from "@material-ui/core";
+import Container from "@material-ui/core/Container";
+import Box from "@material-ui/core/Box";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import Card from "@material-ui/core/Card";
+import Button from "@material-ui/core/Button";
+import CardMedia from "@material-ui/core/CardMedia";
 
 const marketCard = (
   <Card sx={{ maxWidth: 345 }}>
@@ -72,7 +70,9 @@ function Catalog() {
           alignItems="center"
         >
           <Grid item py={5}>
-            <Typography variant="h3" color="primary">Catalog</Typography>
+            <Typography variant="h3" color="primary">
+              Catalog
+            </Typography>
           </Grid>
         </Grid>
 

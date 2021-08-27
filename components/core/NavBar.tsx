@@ -1,21 +1,20 @@
 import * as React from "react";
-import {
-  Box,
-  Toolbar,
-  Typography,
-  Button,
-  IconButton,
-  Divider,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText,
-  Stack,
-  useMediaQuery,
-  styled,
-  useTheme,
-} from "@material-ui/core";
-import { Menu, ChevronLeft, ChevronRight } from "@material-ui/icons";
+import Box from "@material-ui/core/Box";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import IconButton from "@material-ui/core/IconButton";
+import Divider from "@material-ui/core/Divider";
+import Drawer from "@material-ui/core/Drawer";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import Stack from "@material-ui/core/Stack";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { styled, useTheme } from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import MuiAppBar, {
   AppBarProps as MuiAppBarProps,
 } from "@material-ui/core/AppBar";
@@ -80,7 +79,7 @@ function NavBar() {
               edge="start"
               sx={{ mr: 2, ...(open && { display: "none" }) }}
             >
-              <Menu />
+              <MenuIcon />
             </IconButton>
 
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -104,7 +103,7 @@ function NavBar() {
         >
           <DrawerHeader>
             <IconButton onClick={handleDrawerClose}>
-              {theme.direction === "ltr" ? <ChevronLeft /> : <ChevronRight />}
+              {theme.direction === "ltr" ? <ChevronLeftIcon /> : <ChevronRightIcon />}
             </IconButton>
           </DrawerHeader>
           <Divider />

@@ -1,10 +1,10 @@
 import React from "react";
 import {
   createTheme,
-  ThemeProvider,
-  CssBaseline,
   responsiveFontSizes,
-} from "@material-ui/core";
+  ThemeProvider,
+} from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
 import NavBar from "./NavBar";
 import Header from "./Header";
 import Catalog from "./Catalog";

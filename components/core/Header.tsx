@@ -1,11 +1,9 @@
 import Image from "next/image";
-import {
-  Container,
-  Grid,
-  Box,
-  Typography,
-  useMediaQuery,
-} from "@material-ui/core";
+import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
+import Box from "@material-ui/core/Box";
+import Typography from "@material-ui/core/Typography";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Typist from "react-typist";
 
 function Header() {
@@ -30,8 +28,8 @@ function Header() {
                 <br />
 
                 <Typography variant="subtitle1">
-                  Financial education rate is low in Malaysia. It is time for a
-                  change.
+                  Malaysia has a low percentage of financial education. It's
+                  past time to make a difference.
                 </Typography>
               </Typist>
             </Grid>
@@ -72,8 +70,8 @@ function Header() {
               <br />
 
               <Typography variant="subtitle1">
-                Financial education rate is low in Malaysia. <span /> It is time
-                for a change.
+                Malaysia has a low percentage of financial literacy. <br />
+                It's time to make a difference.
               </Typography>
             </Typist>
           </Grid>
