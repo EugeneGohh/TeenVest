@@ -83,7 +83,7 @@ function Catalog() {
           alignItems="center"
           rowSpacing={5}
           columnSpacing={{ xs: 1, sm: 2, md: 10 }}
-          py={3}
+          p={2}
         >
           <Grid item>
             <Card>{marketCard}</Card>
