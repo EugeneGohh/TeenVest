@@ -24,7 +24,7 @@ function Footer() {
           columns={{ xs: 4, sm: 8, md: 13 }}
         >
           <Grid item xs={10} sm={4} md={8} mt={6} textAlign="center">
-            <Typography variant="h3">
+            <Typography variant="h3" gutterBottom>
               It's time to start
               <br /> investing in yourself.
             </Typography>

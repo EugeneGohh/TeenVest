@@ -56,7 +56,7 @@ function NavBar() {
   const [open, setOpen] = React.useState(false);
   const matches = useMediaQuery("(max-width: 950px)");
 
-  const title = ["Courses", "Our Leaners", "Contact", "Log In", "Sign Up"];
+  const title = ["Courses", "Contact", "Log In", "Sign Up"];
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -103,14 +103,20 @@ function NavBar() {
         >
           <DrawerHeader>
             <IconButton onClick={handleDrawerClose}>
-              {theme.direction === "ltr" ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+              {theme.direction === "ltr" ? (
+                <ChevronLeftIcon />
+              ) : (
+                <ChevronRightIcon />
+              )}
             </IconButton>
           </DrawerHeader>
           <Divider />
           <List>
             {title.map((text) => (
               <ListItem button key={text}>
-                <ListItemText primary={text} />
+                <Button>
+                  <ListItemText primary={text} style={{ color: "black" }} />
+                </Button>
               </ListItem>
             ))}
           </List>
@@ -129,7 +135,7 @@ function NavBar() {
 
           {title.map((text) => (
             <Stack m={0.5} key={text}>
-              <Button color="secondary">{text}</Button>
+              <Button style={{ color: "white" }}>{text}</Button>
             </Stack>
           ))}
         </Toolbar>
