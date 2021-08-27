@@ -1,71 +1,87 @@
+import Image from "next/image";
 import React from "react";
-import {
-  Container,
-  Box,
-  Typography,
-  Grid,
-  Paper,
-  Button,
-  InputBase,
-} from "@material-ui/core";
-import { AiFillFacebook, AiFillGithub, AiFillYoutube } from "react-icons/ai";
+import Container from "@material-ui/core/Container";
+import Box from "@material-ui/core/Box";
+import Typography from "@material-ui/core/Typography";
+import Grid from "@material-ui/core/Grid";
+import Button from "@material-ui/core/Button";
+import Link from "@material-ui/core/Link";
+import Divider from "@material-ui/core/Divider";
 
 function Footer() {
   return (
     <Container maxWidth="xl" disableGutters>
       <Box
         sx={{
-          bgcolor: "#AE96EC",
-          height: "100%",
+          bgcolor: "#0F0E17",
+          height: "auto",
           display: "grid",
-          columnGap: "1",
         }}
       >
-        <Grid container p={8} spacing={2} columns={16}>
-          <Grid item xs={8}>
-            <Typography variant="h6">TeenVest</Typography>
-            <Typography variant="subtitle2">
-              Democratizing financial education
-              <br />
-              at scale.
+        <Grid
+          container
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 4, sm: 8, md: 13 }}
+        >
+          <Grid item xs={10} sm={4} md={8} mt={6} textAlign="center">
+            <Typography variant="h3" gutterBottom>
+              It's time to start
+              <br /> investing in yourself.
             </Typography>
 
-            <Grid item p={0} m={0}>
-              <Button href="#" color="secondary">
-                <AiFillFacebook size={40} />
-              </Button>
-
-              <Button href="#" color="secondary">
-                <AiFillYoutube size={40} />
-              </Button>
-
-              <Button href="#" color="secondary">
-                <AiFillGithub size={40} />
-              </Button>
-            </Grid>
-          </Grid>
-
-          <Grid item xs={8}>
-            <Typography variant="h6">Subscribe to our newsletter?</Typography>
+            <Typography variant="subtitle1">
+              Why? Financial literacy is critical, <br />
+              yet it is not taught in today's educational system.
+            </Typography>
 
             <br />
 
-            <Paper
-              component="form"
-              sx={{
-                p: "2px 4px",
-                display: "flex",
-                alignItems: "center",
-                width: 400,
-              }}
-            >
-              <InputBase
-                sx={{ ml: 1, flex: 1 }}
-                placeholder="email@example.com"
-                inputProps={{ "aria-label": "Your Email" }}
-              />
-              <Button variant="contained">Submit</Button>
-            </Paper>
+            <Button variant="contained" color="secondary">
+              Take a test?
+            </Button>
+          </Grid>
+
+          <Grid item xs={10} sm={4} md={4}>
+            <Image
+              src="https://res.cloudinary.com/dfkd65uqz/image/upload/v1630025153/1_-_REBUILD_THE_ECONOMY_ygisvz.svg"
+              alt="3D Shapes"
+              width={450}
+              height={350}
+            />
+          </Grid>
+        </Grid>
+
+        <Divider style={{ background: "white" }} variant="middle" />
+
+        <Grid
+          container
+          spacing={{ xs: 2, md: 1 }}
+          columns={{ xs: 4, sm: 8, md: 12 }}
+          textAlign="center"
+          p={4}
+        >
+          <Grid item xs={2} sm={4} md={2}>
+            <Link href="/" underline="none" color="inherit">
+              <Typography variant="h6">About</Typography>
+            </Link>
+          </Grid>
+
+          <Grid item xs={2} sm={4} md={2}>
+            <Link href="/" underline="none" color="inherit">
+              <Typography variant="h6">Market</Typography>
+            </Link>
+          </Grid>
+
+          <Grid item xs={2} sm={4} md={2}>
+            <Link href="/" underline="none" color="inherit">
+              <Typography variant="h6">Courses</Typography>
+            </Link>
+          </Grid>
+
+          <Grid item xs={2} sm={4} md={2}>
+            <Link href="/" underline="none" color="inherit">
+              <Typography variant="h6">Contact</Typography>
+            </Link>
           </Grid>
         </Grid>
       </Box>

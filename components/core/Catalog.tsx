@@ -1,15 +1,13 @@
 import React from "react";
-import {
-  Container,
-  Box,
-  Grid,
-  Typography,
-  CardActions,
-  CardContent,
-  Card,
-  Button,
-  CardMedia,
-} from "@material-ui/core";
+import Container from "@material-ui/core/Container";
+import Box from "@material-ui/core/Box";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import Card from "@material-ui/core/Card";
+import Button from "@material-ui/core/Button";
+import CardMedia from "@material-ui/core/CardMedia";
 
 const marketCard = (
   <Card sx={{ maxWidth: 345 }}>
@@ -19,10 +17,10 @@ const marketCard = (
       title="Market"
     />
     <CardContent>
-      <Typography gutterBottom variant="h5" component="div">
+      <Typography gutterBottom variant="h5">
         Market
       </Typography>
-      <Typography variant="body2" color="text.secondary">
+      <Typography variant="body2" color="primary">
         Market for open for everyone under parents provision.
       </Typography>
     </CardContent>
@@ -40,10 +38,10 @@ const coursesCard = (
       title="Courses"
     />
     <CardContent>
-      <Typography gutterBottom variant="h5" component="div">
+      <Typography gutterBottom variant="h5">
         Courses
       </Typography>
-      <Typography variant="body2" color="text.secondary">
+      <Typography variant="body2" color="primary">
         An investment in knowledge pays the best interest. Keep chasing your
         ROI.
       </Typography>
@@ -60,7 +58,7 @@ function Catalog() {
       <Box
         sx={{
           bgcolor: "#FFFFFF",
-          height: "100%",
+          height: "auto",
           display: "grid",
           columnGap: "1",
         }}
@@ -72,7 +70,9 @@ function Catalog() {
           alignItems="center"
         >
           <Grid item py={5}>
-            <Typography variant="h3">Catalog</Typography>
+            <Typography variant="h3" color="primary">
+              Catalog
+            </Typography>
           </Grid>
         </Grid>
 
@@ -83,6 +83,7 @@ function Catalog() {
           alignItems="center"
           rowSpacing={5}
           columnSpacing={{ xs: 1, sm: 2, md: 10 }}
+          p={2}
         >
           <Grid item>
             <Card>{marketCard}</Card>
