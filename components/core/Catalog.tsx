@@ -21,7 +21,7 @@ const marketCard = (
         Market
       </Typography>
       <Typography variant="body2" color="primary">
-        Market for open for everyone under parents provision.
+        Using a virtual market to teach kids how to invest.
       </Typography>
     </CardContent>
     <CardActions>
@@ -42,8 +42,8 @@ const coursesCard = (
         Courses
       </Typography>
       <Typography variant="body2" color="primary">
-        An investment in knowledge pays the best interest. Keep chasing your
-        ROI.
+        The highest return on investment is knowledge. Keep chasing your return
+        on investment.
       </Typography>
     </CardContent>
     <CardActions>
