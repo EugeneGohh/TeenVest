@@ -38,7 +38,7 @@ let theme = createTheme({
   },
   typography: {
     htmlFontSize: 16,
-    fontFamily: "Proxima Nova",
+    fontFamily: "Proxima Nova, Roboto, Arial, sans-serif",
     fontSize: 14,
     fontWeightLight: 300,
     fontWeightRegular: 400,

@@ -20,18 +20,16 @@ function Header() {
         >
           <Grid container textAlign="center" justifyContent="center">
             <Grid item sm={6} md={10} p={5}>
-              <Typist>
-                <Typography variant="h3" component="div">
+              <Typography variant="h3" component="div">
                   Democratizing <span /> Financial Education Across Malaysia
-                </Typography>
+              </Typography>
 
-                <br />
+              <br />
 
-                <Typography variant="subtitle1">
+              <Typography variant="subtitle1">
                   Malaysia has a low percentage of financial education. It's
                   past time to make a difference.
-                </Typography>
-              </Typist>
+              </Typography>
             </Grid>
 
             <Grid item sm={8}>
