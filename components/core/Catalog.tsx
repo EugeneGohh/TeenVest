@@ -18,10 +18,10 @@ const marketCard = (
       title="Market"
     />
     <CardContent>
-      <Typography gutterBottom variant="h5">
+      <Typography gutterBottom variant="h5" color="primary">
         Market
       </Typography>
-      <Typography variant="body2" color="primary">
+      <Typography variant="body2" color="primary" textAlign="left">
         Using a virtual market to teach kids how to invest.
       </Typography>
     </CardContent>
@@ -39,10 +39,10 @@ const coursesCard = (
       title="Courses"
     />
     <CardContent>
-      <Typography gutterBottom variant="h5">
+      <Typography gutterBottom variant="h5" color="primary">
         Courses
       </Typography>
-      <Typography variant="body2" color="primary">
+      <Typography variant="body2" color="primary" textAlign="left">
         The highest return on investment is knowledge. Keep chasing your return
         on investment.
       </Typography>
@@ -88,6 +88,7 @@ function Catalog() {
         >
           <Grid item>
             <motion.button
+              animate={{ background: "none", border: "none" }}
               whileHover={{ scale: 0.9 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -97,6 +98,7 @@ function Catalog() {
 
           <Grid item>
             <motion.button
+              animate={{ background: "none", border: "none" }}
               whileHover={{ scale: 0.9 }}
               whileTap={{ scale: 0.9 }}
             >

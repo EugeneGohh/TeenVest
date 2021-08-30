@@ -7,6 +7,7 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
 import Divider from "@material-ui/core/Divider";
+import { motion } from "framer-motion";
 
 function Footer() {
   return (
@@ -36,9 +37,11 @@ function Footer() {
 
             <br />
 
-            <Button variant="contained" color="secondary">
-              Take a test?
-            </Button>
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <Button variant="contained" color="secondary">
+                Take a test?
+              </Button>
+            </motion.div>
           </Grid>
 
           <Grid item xs={10} sm={4} md={4}>
