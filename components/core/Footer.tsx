@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import Image from "next/image";
 import React from "react";
 import Container from "@material-ui/core/Container";
@@ -7,6 +8,7 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
 import Divider from "@material-ui/core/Divider";
+import Zoom from "react-reveal/Zoom";
 
 function Footer() {
   return (
@@ -24,30 +26,34 @@ function Footer() {
           columns={{ xs: 4, sm: 8, md: 13 }}
         >
           <Grid item xs={10} sm={4} md={8} mt={6} textAlign="center">
-            <Typography variant="h3" gutterBottom>
-              It's time to start
-              <br /> investing in yourself.
-            </Typography>
+            <Zoom top>
+              <Typography variant="h3" gutterBottom>
+                It's time to start
+                <br /> investing in yourself.
+              </Typography>
 
-            <Typography variant="subtitle1">
-              Why? Financial literacy is critical, <br />
-              yet it is not taught in today's educational system.
-            </Typography>
+              <Typography variant="subtitle1">
+                Why? Financial literacy is critical, <br />
+                yet it is not taught in today's educational system.
+              </Typography>
 
-            <br />
+              <br />
 
-            <Button variant="contained" color="secondary">
-              Take a test?
-            </Button>
+              <Button variant="contained" color="secondary">
+                Take a test?
+              </Button>
+            </Zoom>
           </Grid>
 
           <Grid item xs={10} sm={4} md={4}>
-            <Image
-              src="https://res.cloudinary.com/dfkd65uqz/image/upload/v1630025153/1_-_REBUILD_THE_ECONOMY_ygisvz.svg"
-              alt="3D Shapes"
-              width={450}
-              height={350}
-            />
+            <Zoom top>
+              <Image
+                src="https://res.cloudinary.com/dfkd65uqz/image/upload/v1630025153/1_-_REBUILD_THE_ECONOMY_ygisvz.svg"
+                alt="3D Shapes"
+                width={450}
+                height={350}
+              />
+            </Zoom>
           </Grid>
         </Grid>
 
