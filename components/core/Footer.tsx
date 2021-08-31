@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import Image from "next/image";
 import React from "react";
 import Container from "@material-ui/core/Container";
