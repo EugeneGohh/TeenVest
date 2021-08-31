@@ -8,6 +8,7 @@ import CardContent from "@material-ui/core/CardContent";
 import Card from "@material-ui/core/Card";
 import Button from "@material-ui/core/Button";
 import CardMedia from "@material-ui/core/CardMedia";
+import Zoom from "react-reveal/Zoom";
 
 const marketCard = (
   <Card sx={{ maxWidth: 345 }}>
@@ -17,10 +18,10 @@ const marketCard = (
       title="Market"
     />
     <CardContent>
-      <Typography gutterBottom variant="h5">
+      <Typography gutterBottom variant="h5" color="primary" textAlign="left">
         Market
       </Typography>
-      <Typography variant="body2" color="primary">
+      <Typography variant="body2" color="primary" textAlign="left">
         Using a virtual market to teach kids how to invest.
       </Typography>
     </CardContent>
@@ -38,10 +39,10 @@ const coursesCard = (
       title="Courses"
     />
     <CardContent>
-      <Typography gutterBottom variant="h5">
+      <Typography gutterBottom variant="h5" color="primary" textAlign="left">
         Courses
       </Typography>
-      <Typography variant="body2" color="primary">
+      <Typography variant="body2" color="primary" textAlign="left">
         The highest return on investment is knowledge. Keep chasing your return
         on investment.
       </Typography>
@@ -86,11 +87,15 @@ function Catalog() {
           p={2}
         >
           <Grid item>
-            <Card>{marketCard}</Card>
+            <Zoom top>
+              <Card>{marketCard}</Card>
+            </Zoom>
           </Grid>
 
           <Grid item>
-            <Card>{coursesCard}</Card>
+            <Zoom top>
+              <Card>{coursesCard}</Card>
+            </Zoom>
           </Grid>
         </Grid>
       </Box>
