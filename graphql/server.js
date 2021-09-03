@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-const {ApolloServer, gql} = require("apollo-server");
+const { ApolloServer, gql } = require("apollo-server");
 
 // The GraphQL schema
 const typeDefs = gql`
@@ -11,8 +11,8 @@ const typeDefs = gql`
 
 // A map of functions which return data for the schema.
 const resolvers = {
-  Query : {
-    hello : () => "world",
+  Query: {
+    hello: () => "world",
   },
 };
 
@@ -21,4 +21,6 @@ const server = new ApolloServer({
   resolvers,
 });
 
-server.listen().then(({url}) => { console.log(`🚀 Server ready at ${url}`); });
+server.listen().then(({ url }) => {
+  console.log(`🚀 Server ready at ${url}`);
+});
