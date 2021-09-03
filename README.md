@@ -66,6 +66,7 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 An education platform to democratize financial literacy for all.
@@ -74,13 +75,14 @@ An education platform to democratize financial literacy for all.
 
 Frameworks & libraries used:
 
-* [Next.js](https://nextjs.org/)
-* [React](https://reactjs.org/)
-* [Redux](https://redux.js.org/)
-* [GraphQL](https://graphql.org/)
-* [MaterialUI](https://next.material-ui.com/)
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [GraphQL](https://graphql.org/)
+- [MaterialUI](https://next.material-ui.com/)
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 Here's how you can get started:
@@ -100,42 +102,49 @@ Here's how you can get started:
    ```
 
 <!-- USAGE EXAMPLES -->
+
 ## Features
 
 TBD
 
 <!-- ROADMAP -->
+
 ## Roadmap
 
 TBD
 
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
+
 ## Contact
 
-Twitter - [@_eugenegoh](https://twitter.com/_eugenegoh)
+Twitter - [@\_eugenegoh](https://twitter.com/_eugenegoh)
 
 Project Link: [TeenVest](https://github.com/TeenVest/TeenVest)
 
 <!-- ACKNOWLEDGEMENTS -->
+
 ## Acknowledgements
 
-* [React](https://reactjs.org/)
-* [Next.js](https://nextjs.org/)
-* [GraphQL](https://graphql.org/)
-* [MIT License](https://github.com/TeenVest/TeenVest/blob/main/LICENSE)
+- [React](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [GraphQL](https://graphql.org/)
+- [MIT License](https://github.com/TeenVest/TeenVest/blob/main/LICENSE)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
 [contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
