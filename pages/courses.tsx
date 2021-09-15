@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import * as React from "react";
 import Link from "next/link";
 import fs from "fs";
@@ -13,7 +14,7 @@ import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
 import { posts as postsFromCMS } from "../content";
 
-function Courses({ posts }) {
+export default function Courses({ posts }) {
   return (
     <Container maxWidth="xl" disableGutters>
       <Box
@@ -65,41 +66,15 @@ function Courses({ posts }) {
   );
 }
 
-export default Courses;
-
-// export async function getStaticProps() {
-//   // Get files from posts directory
-//   const files = fs.readdirSync(path.join("posts"));
-
-//   // Get slug and frontmatter from posts
-//   const posts = files.map((filename) => {
-//     // Create slug
-//     const slug = filename.replace(".md", "");
-
-//     // Get frontmatter
-//     const markdownWithMeta = fs.readFileSync(
-//       path.join("posts", filename),
-//       "utf-8"
-//     );
-
-//     const { data: frontmatter } = matter(markdownWithMeta);
-
-//     return {
-//       slug,
-//       frontmatter,
-//     };
-//   });
-
-//   return {
-//     props: {
-//       posts,
-//     },
-//   };
-// }
+Courses.defaultProps = {
+  posts: [],
+};
 
 export async function getStaticProps(ctx) {
   // Posts from CMS
-  const cmsPosts = (ctx.preview ? postsFromCMS.draft : postsFromCMS.published).map((post) => {
+  const cmsPosts = (
+    ctx.preview ? postsFromCMS.draft : postsFromCMS.published
+  ).map((post) => {
     const { data } = matter(post); // Convert to JSON
     return data;
   });

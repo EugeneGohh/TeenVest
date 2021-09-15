@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import fs from "fs";
 import path from "path";
@@ -17,36 +18,10 @@ export default function PostPage({ source, frontMatter }) {
   );
 }
 
-// export async function getStaticPaths() {
-//   const files = fs.readdirSync(path.join("posts"));
-//   const paths = files.map((filename) => ({
-//     params: {
-//       slug: filename.replace(".md", ""),
-//     },
-//   }));
-
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// }
-
-// export async function getStaticProps({ params: { slug } }) {
-//   const markdownWithMeta = fs.readFileSync(
-//     path.join("posts", `${slug}.md`),
-//     "utf-8"
-//   );
-
-//   const { data: frontmatter, content } = matter(markdownWithMeta);
-
-//   return {
-//     props: {
-//       frontmatter,
-//       content,
-//       slug,
-//     },
-//   };
-// }
+PostPage.defaultProps = {
+  source: "",
+  frontMatter: { title: "default title", summary: "summary", publishedOn: "" },
+};
 
 export async function getStaticPaths() {
   // Path from filesystem
