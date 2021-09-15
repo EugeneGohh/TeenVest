@@ -51,12 +51,12 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   justifyContent: "flex-end",
 }));
 
-function NavBar() {
+export default function NavBar() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const matches = useMediaQuery("(max-width: 950px)");
 
-  const title = ["Courses", "Contact", "Log In", "Sign Up"];
+  const title = ["Log In", "Sign Up"];
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -143,5 +143,3 @@ function NavBar() {
     </Box>
   );
 }
-
-export default NavBar;

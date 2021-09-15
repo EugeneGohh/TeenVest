@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
@@ -48,7 +49,9 @@ const coursesCard = (
       </Typography>
     </CardContent>
     <CardActions>
-      <Button size="small">Learn More</Button>
+      <Link href="/courses">
+        <Button size="small">Learn More</Button>
+      </Link>
     </CardActions>
   </Card>
 );

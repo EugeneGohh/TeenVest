@@ -135,7 +135,7 @@ let theme = createTheme({
 
 theme = responsiveFontSizes(theme);
 
-function LandingPage() {
+export default function LandingPage() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -146,5 +146,3 @@ function LandingPage() {
     </ThemeProvider>
   );
 }
-
-export default LandingPage;

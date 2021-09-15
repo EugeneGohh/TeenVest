@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Typist from "react-typist";
 
-function Header() {
+export default function Header() {
   const resize = useMediaQuery("(max-width: 950px)");
 
   if (resize) {
@@ -21,14 +21,14 @@ function Header() {
           <Grid container textAlign="center" justifyContent="center">
             <Grid item sm={6} md={10} p={5}>
               <Typography variant="h3" component="div">
-                  Democratizing <span /> Financial Education Across Malaysia
+                Democratizing <span /> Financial Education Across Malaysia
               </Typography>
 
               <br />
 
               <Typography variant="subtitle1">
-                  Malaysia has a low percentage of financial education. It's
-                  past time to make a difference.
+                Malaysia has a low percentage of financial education. It's past
+                time to make a difference.
               </Typography>
             </Grid>
 
@@ -87,5 +87,3 @@ function Header() {
     </Container>
   );
 }
-
-export default Header;
