@@ -49,7 +49,7 @@ const coursesCard = (
       </Typography>
     </CardContent>
     <CardActions>
-      <Link href="/course/courses">
+      <Link href="/courses">
         <Button size="small">Learn More</Button>
       </Link>
     </CardActions>

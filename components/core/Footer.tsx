@@ -9,7 +9,7 @@ import Link from "@material-ui/core/Link";
 import Divider from "@material-ui/core/Divider";
 import Zoom from "react-reveal/Zoom";
 
-function Footer() {
+export default function Footer() {
   return (
     <Container maxWidth="xl" disableGutters>
       <Box
@@ -93,5 +93,3 @@ function Footer() {
     </Container>
   );
 }
-
-export default Footer;
