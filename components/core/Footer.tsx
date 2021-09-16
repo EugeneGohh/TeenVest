@@ -68,7 +68,7 @@ export default function Footer() {
         >
           <Stack spacing={6}>
             <Box>
-              <Logo color={useColorModeValue("gray.700", "white")} />
+              <Logo />
             </Box>
             <Text fontSize="sm">© 2021 TeenVest. All rights reserved</Text>
             <Stack direction="row" spacing={6}>
