@@ -1,27 +1,28 @@
 import React from "react";
 import {
   Avatar,
+  AlertDialogBody,
+  AlertDialogFooter,
   Box,
-  Button,
   Flex,
   Text,
-  Icon,
   IconButton,
+  Button,
   Stack,
   Collapse,
+  Icon,
   Link,
   Popover,
   PopoverTrigger,
+  Menu,
+  MenuList,
+  MenuItem,
+  MenuDivider,
+  MenuButton,
   PopoverContent,
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Wrap,
-  WrapItem,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -29,34 +30,29 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-import { signIn, useSession } from "next-auth/client";
+import { getSession, useSession } from "next-auth/client";
 
-export default function NavBar() {
-  const [session] = useSession();
+export default function UserProfile() {
   const { isOpen, onToggle } = useDisclosure();
+  const [session, isLoading] = useSession();
 
-  // console.log(session);
+  if (isLoading) {
+    return null;
+  }
 
-  const User = () => (
-    <Wrap>
-      <WrapItem>
-        <Menu>
-          <MenuButton
-            as={Button}
-            rounded="full"
-            variant="link"
-            cursor="pointer"
-            minW={0}
-          >
-            <Avatar name={session.user.name} />
-          </MenuButton>
-          <MenuList>
-            <MenuItem>Dashboard</MenuItem>
-          </MenuList>
-        </Menu>
-      </WrapItem>
-    </Wrap>
-  );
+  if (!isLoading && !session) {
+    return (
+      <div>
+        <AlertDialogBody>Session expired</AlertDialogBody>
+
+        <AlertDialogFooter>
+          <Button colorScheme="red" ml={3}>
+            Delete
+          </Button>
+        </AlertDialogFooter>
+      </div>
+    );
+  }
 
   return (
     <Box>
@@ -105,29 +101,23 @@ export default function NavBar() {
           direction="row"
           spacing={6}
         >
-          {session ? (
-            <User />
-          ) : (
-            <Link href="/signin">
-              <Button
-                as="a"
-                display={{ md: "inline-flex" }}
-                fontSize="sm"
-                fontWeight={600}
-                color="white"
-                bg="pink.400"
-                _hover={{
-                  bg: "pink.300",
-                }}
-                onClick={(e) => {
-                  e.preventDefault();
-                  signIn();
-                }}
-              >
-                Sign Up With GitHub
-              </Button>
-            </Link>
-          )}
+          <Menu>
+            <MenuButton
+              as={Button}
+              rounded="full"
+              variant="link"
+              cursor="pointer"
+              minW={0}
+            >
+              <Avatar size="sm" name={session.user} />
+            </MenuButton>
+            <MenuList>
+              <MenuItem>Link 1</MenuItem>
+              <MenuItem>Link 2</MenuItem>
+              <MenuDivider />
+              <MenuItem>Link 3</MenuItem>
+            </MenuList>
+          </Menu>
         </Stack>
       </Flex>
 
@@ -329,3 +319,12 @@ const NAV_ITEMS: Array<NavItem> = [
   //   href: "#",
   // },
 ];
+
+export async function getServerSideProps(ctx) {
+  // Pass data from server to client
+  const session = await getSession(ctx);
+
+  return {
+    props: { session },
+  };
+}

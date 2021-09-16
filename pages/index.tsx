@@ -1,5 +1,9 @@
 import Head from "next/head";
-import LandingPage from "../components/core/LandingPage";
+import NavBar from "../components/core/NavBar";
+import Features from "../components/core/Features";
+import Testimonial from "../components/core/Testimonial";
+import Footer from "../components/core/Footer";
+import Hero from "../components/core/Hero";
 
 export default function Home() {
   return (
@@ -11,7 +15,11 @@ export default function Home() {
       </Head>
 
       <main>
-        <LandingPage />
+        <NavBar />
+        <Hero />
+        <Features />
+        <Testimonial />
+        <Footer />
       </main>
     </div>
   );
