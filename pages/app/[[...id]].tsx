@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  Avatar,
+  // Avatar,
   AlertDialogBody,
   AlertDialogFooter,
   Box,
@@ -109,7 +109,7 @@ export default function UserProfile() {
               cursor="pointer"
               minW={0}
             >
-              <Avatar size="sm" name={session.user} />
+              {/* <Avatar size="sm" name={session.user} /> */}
             </MenuButton>
             <MenuList>
               <MenuItem>Link 1</MenuItem>
