@@ -19,7 +19,7 @@ import {
   Menu,
   MenuButton,
   MenuList,
-  MenuItem,
+  // MenuItem,
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
@@ -48,10 +48,10 @@ export default function NavBar() {
             cursor="pointer"
             minW={0}
           >
-            <Avatar name={session.user.name} />
+            <Avatar src="https://bit.ly/broken-link" />
           </MenuButton>
           <MenuList>
-            <MenuItem>Dashboard</MenuItem>
+            {/* <MenuItem>{session.user.name}</MenuItem> */}
           </MenuList>
         </Menu>
       </WrapItem>
