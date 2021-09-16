@@ -1,93 +1,70 @@
-import React, { useEffect } from "react";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import CircularProgress from "@mui/material/CircularProgress";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { signIn, useSession } from "next-auth/client";
-import { useRouter } from "next/router";
-import GitHubIcon from "@mui/icons-material/GitHub";
-
-function Copyright(props: any) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {"Copyright © "}
-      <Link color="inherit" href="https://teen-vest.vercel.app/">
-        TeenVest
-      </Link>{" "}
-      {new Date().getFullYear()}.
-    </Typography>
-  );
-}
-
-const theme = createTheme();
+import React from "react";
+import {
+  chakra,
+  Box,
+  GridItem,
+  useColorModeValue,
+  Button,
+  Flex,
+  SimpleGrid,
+} from "@chakra-ui/react";
+// import { signIn, useSession } from "next-auth/client";
+// import { useRouter } from "next/router";
 
 export default function Signin() {
-  const [session, loading] = useSession();
-  const router = useRouter();
-
-  useEffect(() => {
-    if (session) {
-      router.push("/courses"); // If session true, redirect to app
-    }
-  }, [session, router]);
-
-  if (loading) {
-    return (
-      <Box sx={{ display: "flex" }}>
-        <CircularProgress />
-      </Box>
-    );
-  }
+  // const [session, loading] = useSession();
+  // const router = useRouter();
 
   return (
-    <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <Box
-          sx={{
-            marginTop: 8,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
+    <Box px={8} py={24} mx="auto">
+      <SimpleGrid
+        alignItems="center"
+        w={{ base: "full", xl: 11 / 12 }}
+        columns={{ base: 1, lg: 11 }}
+        gap={{ base: 0, lg: 24 }}
+        mx="auto"
+      >
+        <GridItem
+          colSpan={{ base: "auto", lg: 7 }}
+          textAlign={{ base: "center", lg: "left" }}
         >
-          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign up
-          </Typography>
-          <Button
-            fullWidth
-            variant="contained"
-            sx={{ mt: 3, mb: 2 }}
-            onClick={() => signIn("github")}
+          <chakra.h1
+            mb={4}
+            fontSize={{ base: "3xl", md: "4xl" }}
+            fontWeight="bold"
+            lineHeight={{ base: "shorter", md: "none" }}
+            color={useColorModeValue("gray.900", "gray.200")}
+            letterSpacing={{ base: "normal", md: "tight" }}
           >
-            <GitHubIcon sx={{ pr: 1 }} />
-            Continue with GitHub
-          </Button>
-          <Grid container justifyContent="flex-end">
-            <Grid item>
-              <Link href="." variant="body2">
-                Already have an account? Sign in
-              </Link>
-            </Grid>
-          </Grid>
-        </Box>
-        <Copyright sx={{ mt: 5 }} />
-      </Container>
-    </ThemeProvider>
+            Ready to start your journey?
+          </chakra.h1>
+          <chakra.p
+            mb={{ base: 10, md: 4 }}
+            fontSize={{ base: "lg", md: "xl" }}
+            fontWeight="thin"
+            color="gray.500"
+            letterSpacing="wider"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem unde
+            quae exercitationem deleniti eaque minima quas iusto expedita natus,
+            possimus quis accusantium? Omnis minus voluptas magnam libero unde,
+            voluptate dolorum.
+          </chakra.p>
+        </GridItem>
+        <GridItem colSpan={{ base: "auto", md: 4 }}>
+          <Box as="form" mb={6} rounded="lg" shadow="xl">
+            <Flex px={6} py={4}>
+              <Button py={2} w="full" colorScheme="blue">
+                Continue with GitHub
+              </Button>
+            </Flex>
+          </Box>
+          <chakra.p fontSize="xs" textAlign="center" color="gray.600">
+            By signing up you agree to our{" "}
+            <chakra.a color="brand.500">Terms of Service</chakra.a>
+          </chakra.p>
+        </GridItem>
+      </SimpleGrid>
+    </Box>
   );
 }

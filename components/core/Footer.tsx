@@ -1,95 +1,120 @@
-import Image from "next/image";
-import React from "react";
-import Container from "@material-ui/core/Container";
-import Box from "@material-ui/core/Box";
-import Typography from "@material-ui/core/Typography";
-import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
-import Link from "@material-ui/core/Link";
-import Divider from "@material-ui/core/Divider";
-import Zoom from "react-reveal/Zoom";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import {
+  Box,
+  chakra,
+  Container,
+  Link,
+  SimpleGrid,
+  Stack,
+  Text,
+  VisuallyHidden,
+  Input,
+  IconButton,
+  useColorModeValue,
+  Heading,
+} from "@chakra-ui/react";
+import { ReactNode } from "react";
+import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { BiMailSend } from "react-icons/bi";
+
+const Logo = () => <Heading>TeenVest</Heading>;
+
+const SocialButton = ({
+  children,
+  label,
+  href,
+}: {
+  children: ReactNode;
+  label: string;
+  href: string;
+}) => (
+  <chakra.button
+    bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+    rounded="full"
+    w={8}
+    h={8}
+    cursor="pointer"
+    as="a"
+    href={href}
+    display="inline-flex"
+    alignItems="center"
+    justifyContent="center"
+    transition="background 0.3s ease"
+    _hover={{
+      bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
+    }}
+  >
+    <VisuallyHidden>{label}</VisuallyHidden>
+    {children}
+  </chakra.button>
+);
+
+const ListHeader = ({ children }: { children: ReactNode }) => (
+  <Text fontWeight="500" fontSize="lg" mb={2}>
+    {children}
+  </Text>
+);
 
 export default function Footer() {
   return (
-    <Container maxWidth="xl" disableGutters>
-      <Box
-        sx={{
-          bgcolor: "#0F0E17",
-          height: "auto",
-          display: "grid",
-        }}
-      >
-        <Grid
-          container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 8, md: 13 }}
+    <Box
+      bg={useColorModeValue("gray.50", "gray.900")}
+      color={useColorModeValue("gray.700", "gray.200")}
+    >
+      <Container as={Stack} maxW="6xl" py={10}>
+        <SimpleGrid
+          templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 2fr" }}
+          spacing={8}
         >
-          <Grid item xs={10} sm={4} md={8} mt={6} textAlign="center">
-            <Zoom top>
-              <Typography variant="h3" gutterBottom>
-                It's time to start
-                <br /> investing in yourself.
-              </Typography>
-
-              <Typography variant="subtitle1">
-                Why? Financial literacy is critical, <br />
-                yet it is not taught in today's educational system.
-              </Typography>
-
-              <br />
-
-              <Button variant="contained" color="secondary">
-                Take a test?
-              </Button>
-            </Zoom>
-          </Grid>
-
-          <Grid item xs={10} sm={4} md={4}>
-            <Zoom top>
-              <Image
-                src="https://res.cloudinary.com/dfkd65uqz/image/upload/v1630025153/1_-_REBUILD_THE_ECONOMY_ygisvz.svg"
-                alt="3D Shapes"
-                width={450}
-                height={350}
+          <Stack spacing={6}>
+            <Box>
+              <Logo color={useColorModeValue("gray.700", "white")} />
+            </Box>
+            <Text fontSize="sm">© 2021 TeenVest. All rights reserved</Text>
+            <Stack direction="row" spacing={6}>
+              <SocialButton label="Twitter" href="#">
+                <FaTwitter />
+              </SocialButton>
+              <SocialButton label="YouTube" href="#">
+                <FaYoutube />
+              </SocialButton>
+              <SocialButton label="Instagram" href="#">
+                <FaInstagram />
+              </SocialButton>
+            </Stack>
+          </Stack>
+          <Stack align="flex-start">
+            <ListHeader>Company</ListHeader>
+            <Link href="#">About us</Link>
+          </Stack>
+          <Stack align="flex-start">
+            <ListHeader>Support</ListHeader>
+            <Link href="#">Help Center</Link>
+          </Stack>
+          <Stack align="flex-start">
+            <ListHeader>Stay up to date</ListHeader>
+            <Stack direction="row">
+              <Input
+                placeholder="Your email address"
+                bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+                border={0}
+                _focus={{
+                  bg: "whiteAlpha.300",
+                }}
               />
-            </Zoom>
-          </Grid>
-        </Grid>
-
-        <Divider style={{ background: "white" }} variant="middle" />
-
-        <Grid
-          container
-          spacing={{ xs: 2, md: 1 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
-          textAlign="center"
-          p={4}
-        >
-          <Grid item xs={2} sm={4} md={2}>
-            <Link href="/" underline="none" color="inherit">
-              <Typography variant="h6">About</Typography>
-            </Link>
-          </Grid>
-
-          <Grid item xs={2} sm={4} md={2}>
-            <Link href="/" underline="none" color="inherit">
-              <Typography variant="h6">Market</Typography>
-            </Link>
-          </Grid>
-
-          <Grid item xs={2} sm={4} md={2}>
-            <Link href="/" underline="none" color="inherit">
-              <Typography variant="h6">Courses</Typography>
-            </Link>
-          </Grid>
-
-          <Grid item xs={2} sm={4} md={2}>
-            <Link href="/" underline="none" color="inherit">
-              <Typography variant="h6">Contact</Typography>
-            </Link>
-          </Grid>
-        </Grid>
-      </Box>
-    </Container>
+              <IconButton
+                bg={useColorModeValue("green.400", "green.800")}
+                color={useColorModeValue("white", "gray.800")}
+                _hover={{
+                  bg: "green.600",
+                }}
+                aria-label="Subscribe"
+                icon={<BiMailSend />}
+              />
+            </Stack>
+          </Stack>
+        </SimpleGrid>
+      </Container>
+    </Box>
   );
 }

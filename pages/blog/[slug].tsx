@@ -1,13 +1,21 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+import { Spinner } from "@chakra-ui/react"
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
+import { useRouter } from "next/router";
 import { posts } from "../../content";
 
 export default function PostPage({ source, frontMatter }) {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Spinner />;
+  }
+
   return (
     <div>
       <p>{frontMatter.title}</p>
