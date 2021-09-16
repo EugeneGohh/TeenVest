@@ -1,6 +1,13 @@
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
+import { Provider } from "next-auth/client";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    // Auth provider
+    <Provider session={pageProps}>
+      <Component {...pageProps} />
+    </Provider>
+  );
 }
-export default MyApp
+
+export default MyApp;
