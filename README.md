@@ -79,7 +79,7 @@ Frameworks & libraries used:
 - [React](https://reactjs.org/)
 - [Redux](https://redux.js.org/)
 - [GraphQL](https://graphql.org/)
-- [MaterialUI](https://next.material-ui.com/)
+- [ChakraUI](https://chakra-ui.com/)
 
 <!-- GETTING STARTED -->
 
