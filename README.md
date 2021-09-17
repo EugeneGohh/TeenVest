@@ -25,11 +25,6 @@
   <h3 align="center">TeenVest</h3>
 
   <p align="center">
-    Financial literacy for all.
-    <br />
-    <a href="https://github.com/TeenVest/TeenVest/blob/main/README.md"><strong>Explore the README »</strong></a>
-    <br />
-    <br />
     <a href="https://teen-vest.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/TeenVest/TeenVest/issues">Report Bug</a>
@@ -38,48 +33,22 @@
   </p>
 </p>
 
-<!-- TABLE OF CONTENTS -->
-
-<details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#features">Features</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
-  </ol>
-</details>
-
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
+## :point_right: About The Project
 
-An education platform to democratize financial literacy for all.
+TeenVest is an educational web based app that teaches people about money in Malaysia. Malaysia has a poor rate of financial literacy, and it's time to alter that.
 
-### Built With
-
-Frameworks & libraries used:
+### :hammer: Built With:
 
 - [Next.js](https://nextjs.org/)
-- [React](https://reactjs.org/)
 - [Redux](https://redux.js.org/)
 - [GraphQL](https://graphql.org/)
 - [ChakraUI](https://chakra-ui.com/)
+
+### :pencil2: Written In:
+
+- [TypeScript](https://www.typescriptlang.org/)
 
 <!-- GETTING STARTED -->
 
@@ -89,13 +58,13 @@ Here's how you can get started:
 
 ### Installation
 
-1. Clone the repo
+1. Clone this repo:
 
    ```sh
    git clone https://github.com/TeenVest/TeenVest.git
    ```
 
-2. Install NPM packages/dependencies
+2. Install `npm` packages:
 
    ```sh
    npm install
@@ -117,9 +86,7 @@ TBD
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to
-be learn, inspire, and create. Any contributions you make are **greatly
-appreciated**.
+TBD
 
 <!-- LICENSE -->
 
@@ -139,8 +106,8 @@ Project Link: [TeenVest](https://github.com/TeenVest/TeenVest)
 
 ## Acknowledgements
 
-- [React](https://reactjs.org/)
 - [Next.js](https://nextjs.org/)
+- [NextAuth](https://next-auth.js.org/)
 - [GraphQL](https://graphql.org/)
 - [MIT License](https://github.com/TeenVest/TeenVest/blob/main/LICENSE)
 
