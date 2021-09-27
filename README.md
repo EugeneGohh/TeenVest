@@ -107,7 +107,7 @@ Project Link: [TeenVest](https://github.com/TeenVest/TeenVest)
 ## Acknowledgements
 
 - [Next.js](https://nextjs.org/)
-- [NextAuth](https://next-auth.js.org/)
+- [Auth0](https://auth0.com/docs/)
 - [GraphQL](https://graphql.org/)
 - [MIT License](https://github.com/TeenVest/TeenVest/blob/main/LICENSE)
 
