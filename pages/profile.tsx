@@ -24,7 +24,7 @@ function Profile() {
   const { user, error, isLoading } = useUser();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const { name, picture } = user;
+  const { name, picture } : any = user;
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
