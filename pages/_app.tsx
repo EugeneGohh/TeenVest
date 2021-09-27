@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
-import { Provider } from "next-auth/client";
-import { ChakraProvider , extendTheme } from "@chakra-ui/react";
+import { UserProvider } from "@auth0/nextjs-auth0";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 
 const colors = {
   brand: {
@@ -9,17 +9,17 @@ const colors = {
     700: "#2a69ac",
   },
 };
+
 const theme = extendTheme({ colors });
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
+
   return (
     // Auth provider
     <ChakraProvider theme={theme}>
-      <Provider session={pageProps.session}>
+      <UserProvider>
         <Component {...pageProps} />
-      </Provider>
+      </UserProvider>
     </ChakraProvider>
   );
 }
-
-export default MyApp;
