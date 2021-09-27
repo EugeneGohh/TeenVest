@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import {
   Box,
   chakra,
@@ -85,11 +84,11 @@ export default function Footer() {
           </Stack>
           <Stack align="flex-start">
             <ListHeader>Company</ListHeader>
-            <Link href="#">About us</Link>
+            <Link href="/">About us</Link>
           </Stack>
           <Stack align="flex-start">
             <ListHeader>Support</ListHeader>
-            <Link href="#">Help Center</Link>
+            <Link href="/">Help Center</Link>
           </Stack>
           <Stack align="flex-start">
             <ListHeader>Stay up to date</ListHeader>

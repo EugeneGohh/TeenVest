@@ -1,6 +1,8 @@
-import React from "react";
+/* eslint-disable react/require-default-props */
+/* eslint-disable react/no-unused-prop-types */
+/* eslint-disable @next/next/no-html-link-for-pages */
+import React, { useEffect } from "react";
 import {
-  Avatar,
   Box,
   Button,
   Flex,
@@ -16,12 +18,6 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
-  Menu,
-  MenuButton,
-  MenuList,
-  // MenuItem,
-  Wrap,
-  WrapItem,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -29,34 +25,19 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-import { signIn, useSession } from "next-auth/client";
+import { useRouter } from "next/router";
+import { useUser } from "@auth0/nextjs-auth0";
 
 export default function NavBar() {
-  const [session] = useSession();
+  const { user } = useUser();
   const { isOpen, onToggle } = useDisclosure();
+  const router = useRouter();
 
-  // console.log(session);
-
-  const User = () => (
-    <Wrap>
-      <WrapItem>
-        <Menu>
-          <MenuButton
-            as={Button}
-            rounded="full"
-            variant="link"
-            cursor="pointer"
-            minW={0}
-          >
-            <Avatar src="https://bit.ly/broken-link" />
-          </MenuButton>
-          <MenuList>
-            {/* <MenuItem>{session.user.name}</MenuItem> */}
-          </MenuList>
-        </Menu>
-      </WrapItem>
-    </Wrap>
-  );
+  useEffect(() => {
+    if (user) {
+      router.push("/profile");
+    }
+  });
 
   return (
     <Box>
@@ -105,29 +86,9 @@ export default function NavBar() {
           direction="row"
           spacing={6}
         >
-          {session ? (
-            <User />
-          ) : (
-            <Link href="/signin">
-              <Button
-                as="a"
-                display={{ md: "inline-flex" }}
-                fontSize="sm"
-                fontWeight={600}
-                color="white"
-                bg="pink.400"
-                _hover={{
-                  bg: "pink.300",
-                }}
-                onClick={(e) => {
-                  e.preventDefault();
-                  signIn();
-                }}
-              >
-                Sign Up With GitHub
-              </Button>
-            </Link>
-          )}
+          <Button as="a" fontSize="sm" fontWeight={400} variant="link">
+            <a href="/api/auth/login">Sign In</a>
+          </Button>
         </Stack>
       </Flex>
 
@@ -296,36 +257,13 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "About Us",
+    label: "About us",
     children: [
       {
         label: "What we do?",
-        subLabel: "Click me to know more!",
+        subLabel: "Click here to know more!",
         href: "#",
       },
     ],
   },
-  // {
-  //   label: "Label here",
-  //   children: [
-  //     {
-  //       label: "Label here",
-  //       subLabel: "Sublabel here",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Label here",
-  //       subLabel: "Sublabel here",
-  //       href: "#",
-  //     },
-  //   ],
-  // },
-  // {
-  //   label: "Label here",
-  //   href: "#",
-  // },
-  // {
-  //   label: "Label here",
-  //   href: "#",
-  // },
 ];

@@ -1,3 +1,6 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/require-default-props */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import {
@@ -12,10 +15,13 @@ import {
   SpaceProps,
   useColorModeValue,
   Container,
+  Code,
+  Spinner,
 } from "@chakra-ui/react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import { posts as postsFromCMS } from "../content";
 
 interface IBlogTags {
@@ -52,7 +58,7 @@ export const BlogAuthor: React.FC<BlogAuthorProps> = (props) => (
   </HStack>
 );
 
-export default function Course({ posts }) {
+function Course({ posts }: any) {
   return (
     <Container maxW="7xl" p="12">
       <Heading as="h1">Courses by John Doe</Heading>
@@ -115,12 +121,7 @@ export default function Course({ posts }) {
                   {post.title}
                 </Link>
               </Heading>
-              <Text
-                as="p"
-                marginTop="2"
-                color={useColorModeValue("gray.700", "gray.200")}
-                fontSize="lg"
-              >
+              <Text as="p" marginTop="2" color="gray.700" fontSize="lg">
                 {post.summary}
               </Text>
               <BlogAuthor
@@ -302,3 +303,8 @@ export async function getStaticProps() {
     props: { posts },
   };
 }
+
+export default withPageAuthRequired(Course, {
+  onRedirecting: () => <Spinner size="xl" />,
+  onError: (error) => <Code>{error.message}</Code>,
+});
