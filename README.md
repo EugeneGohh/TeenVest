@@ -41,10 +41,15 @@ TeenVest is an educational web based app that teaches people about money in Mala
 
 ### :hammer: Built With:
 
+Frontend Layer:
 - [Next.js](https://nextjs.org/)
-- [Redux](https://redux.js.org/)
-- [GraphQL](https://graphql.org/)
 - [ChakraUI](https://chakra-ui.com/)
+
+APIs:
+- [Auth0](https://auth0.com/docs/)
+
+Backend Layer:
+- [ ] TBD
 
 ### :pencil2: Written In:
 
@@ -74,7 +79,10 @@ Here's how you can get started:
 
 ## Features
 
-TBD
+A list of features that are ready:
+
+- [x] Blogs related to money
+- [x] User Authentication
 
 <!-- ROADMAP -->
 
