@@ -35,7 +35,7 @@ Backend Layer:
 
 <!-- GETTING STARTED -->
 
-## Getting Started
+## :green_circle: Getting Started
 
 Here's how you can get started:
 
@@ -63,7 +63,7 @@ Here's how you can get started:
 
 <!-- USAGE EXAMPLES -->
 
-## Features
+## :boom: Features
 
 A list of features that has been implemented:
 
@@ -74,7 +74,7 @@ A list of features that has been implemented:
 
 <!-- ROADMAP -->
 
-## Roadmap
+## :memo: Roadmap
 
 A list of features to be introduced soon:
 
@@ -83,19 +83,19 @@ A list of features to be introduced soon:
 
 <!-- CONTRIBUTING -->
 
-## Contributing
+## :thought_balloon: Contributing
 
 Are you interested about this project? Feel free to contribute. Please take a look at [CONTRIBUTING.md](https://github.com/EugeneGohh/TeenVest/blob/main/CONTRIBUTING.md) before opening a PR or issue. Thank you.
 
 <!-- LICENSE -->
 
-## License
+## :receipt: License
 
 Distributed under the MIT License. See [LICENSE](https://github.com/TeenVest/TeenVest/blob/main/LICENSE) for more information.
 
 <!-- CONTACT -->
 
-## Contact
+## :iphone: Contact
 
 Twitter: [@\_eugenegoh](https://twitter.com/_eugenegoh)
 
