@@ -80,6 +80,7 @@ A list of features to be introduced soon:
 
 - [ ] Graph that displays market data
 - [ ] User able to buy/sell stocks
+- [ ] Add a note-taking functionality
 
 <!-- CONTRIBUTING -->
 
