@@ -85,7 +85,7 @@ A list of features to be introduced soon:
 
 ## Contributing
 
-Are you interested about this project? Feel free to contribute.
+Are you interested about this project? Feel free to contribute. Please take a look at [CONTRIBUTING.md](https://github.com/EugeneGohh/TeenVest/blob/main/CONTRIBUTING.md) before opening a PR or issue. Thank you.
 
 <!-- LICENSE -->
 
