@@ -12,7 +12,7 @@
 
 ## :point_right: What is TeenVest?
 
-TeenVest is an educational web based app that teaches people about money in Malaysia. Malaysia has a poor rate of financial literacy, and it's time to alter that.
+Malaysia has a poor rate of financial literacy, it's to improve that. This is where TeenVest comes in. TeenVest is an educational web app that teaches people about money through blogs and financial markets.
 
 ### :hammer: Built With
 
