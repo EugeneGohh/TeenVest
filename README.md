@@ -39,19 +39,22 @@
 
 TeenVest is an educational web based app that teaches people about money in Malaysia. Malaysia has a poor rate of financial literacy, and it's time to alter that.
 
-### :hammer: Built With:
+### :hammer: Built With
 
 Frontend Layer:
+
 - [Next.js](https://nextjs.org/)
 - [ChakraUI](https://chakra-ui.com/)
 
 APIs:
+
 - [Auth0](https://auth0.com/docs/)
 
 Backend Layer:
+
 - [ ] TBD
 
-### :pencil2: Written In:
+### :pencil2: Written In
 
 - [TypeScript](https://www.typescriptlang.org/)
 
