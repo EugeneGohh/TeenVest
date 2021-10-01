@@ -1,21 +1,3 @@
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
-<!-- PROJECT LOGO -->
-
 <br />
 <p align="center">
   <a href="https://github.com/TeenVest1">
@@ -24,18 +6,11 @@
 
   <h3 align="center">TeenVest</h3>
 
-  <p align="center">
-    <a href="https://teen-vest.vercel.app/">View Demo</a>
-    ·
-    <a href="https://github.com/TeenVest/TeenVest/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/TeenVest/TeenVest/issues">Request Feature</a>
-  </p>
 </p>
 
 <!-- ABOUT THE PROJECT -->
 
-## :point_right: About The Project
+## :point_right: What is TeenVest?
 
 TeenVest is an educational web based app that teaches people about money in Malaysia. Malaysia has a poor rate of financial literacy, and it's time to alter that.
 
@@ -78,40 +53,51 @@ Here's how you can get started:
    npm install
    ```
 
+3. Configure a `.env` file using this command:
+
+   ```sh
+   cp .env.example .env
+   ```
+
+4. Configure `Auth0` in `.env` and get started.
+
 <!-- USAGE EXAMPLES -->
 
 ## Features
 
-A list of features that are ready:
+A list of features that has been implemented:
 
 - [x] Blogs related to money
-- [x] User Authentication
+- [x] User authentication & protecting pages
+
+> NOTE: Blogs only appeared after user has signed in. Pages are protected.
 
 <!-- ROADMAP -->
 
 ## Roadmap
 
-TBD
+A list of features to be introduced soon:
+
+- [ ] Graph that displays market data
+- [ ] User able to buy/sell stocks
 
 <!-- CONTRIBUTING -->
 
 ## Contributing
 
-TBD
+Are you interested about this project? Feel free to contribute. Please take a look at [CONTRIBUTING.md](https://github.com/EugeneGohh/TeenVest/blob/main/CONTRIBUTING.md) before opening a PR or issue. Thank you.
 
 <!-- LICENSE -->
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/TeenVest/TeenVest/blob/main/LICENSE) for more information.
 
 <!-- CONTACT -->
 
 ## Contact
 
-Twitter - [@\_eugenegoh](https://twitter.com/_eugenegoh)
-
-Project Link: [TeenVest](https://github.com/TeenVest/TeenVest)
+Twitter: [@\_eugenegoh](https://twitter.com/_eugenegoh)
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -125,24 +111,16 @@ Project Link: [TeenVest](https://github.com/TeenVest/TeenVest)
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]:
-  https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]:
-  https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]:
-  https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
 [forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]:
-  https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
 [stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]:
-  https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
 [issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]:
-  https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]:
-  https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]:
-  https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
