@@ -27,7 +27,8 @@ APIs:
 
 Backend Layer:
 
-- [ ] TBD
+- [Node.js](https://nodejs.org/en/)
+- [MongoDB](https://www.mongodb.com/)
 
 ### :pencil2: Written In
 
@@ -67,8 +68,9 @@ Here's how you can get started:
 
 A list of features that has been implemented:
 
-- [x] Blogs related to money
-- [x] User authentication & protecting pages
+- [x] Read blogs
+- [x] User authentication and authorisation
+- [x] Protecting pages (Only authenticated users able to use TeenVest's features)
 
 > NOTE: Blogs only appeared after user has signed in. Pages are protected.
 
@@ -78,9 +80,9 @@ A list of features that has been implemented:
 
 A list of features to be introduced soon:
 
+- [ ] Add a note-taking functionality (Working on this now) :computer:
 - [ ] Graph that displays market data
 - [ ] User able to buy/sell stocks
-- [ ] Add a note-taking functionality
 
 <!-- CONTRIBUTING -->
 
@@ -106,7 +108,7 @@ Twitter: [@\_eugenegoh](https://twitter.com/_eugenegoh)
 
 - [Next.js](https://nextjs.org/)
 - [Auth0](https://auth0.com/docs/)
-- [GraphQL](https://graphql.org/)
+- [GraphQL](https://graphql.org/) > Using this soon...
 - [MIT License](https://github.com/TeenVest/TeenVest/blob/main/LICENSE)
 
 <!-- MARKDOWN LINKS & IMAGES -->
