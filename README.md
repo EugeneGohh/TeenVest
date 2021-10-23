@@ -68,7 +68,7 @@ Here's how you can get started:
 
 A list of features that has been implemented:
 
-- [x] Read blogs
+- [x] Blog page
 - [x] User authentication and authorisation
 - [x] Protecting pages (Only authenticated users able to use TeenVest's features)
 
@@ -80,6 +80,7 @@ A list of features that has been implemented:
 
 A list of features to be introduced soon:
 
+- [ ] Create & Read files from database (Working on this now) :computer:
 - [ ] Add a note-taking functionality (Working on this now) :computer:
 - [ ] Graph that displays market data
 - [ ] User able to buy/sell stocks
