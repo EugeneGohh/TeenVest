@@ -19,8 +19,11 @@ export default function Home() {
         <Hero />
         <Features />
         <Testimonial />
-        <Footer />
       </main>
+
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

@@ -47,7 +47,12 @@ export default function Features() {
       justifyContent="center"
       alignItems="center"
     >
-      <Box px={8} py={10} mx="auto" bg={useColorModeValue("white", "gray.800")}>
+      <Box
+        px={8}
+        py={10}
+        mx="auto"
+        bg={useColorModeValue("gray.50", "gray.800")}
+      >
         <Box textAlign={{ lg: "center" }}>
           <chakra.p
             mt={2}
@@ -76,10 +81,10 @@ export default function Features() {
           px={{ base: 4, lg: 16, xl: 24 }}
           py={20}
           mx="auto"
-          bg={useColorModeValue("white", "gray.800")}
+          bg={useColorModeValue("gray.50", "gray.800")}
         >
           <Feature
-            title="Unify your payments stack"
+            title="Notes taking functionality"
             icon={
               <path
                 strokeLinecap="round"
@@ -89,13 +94,11 @@ export default function Features() {
               />
             }
           >
-            Manage all your online and offline sales in one place with a single
-            integration, simplifying reporting and reconciliation. Terminal
-            works seamlessly with Payments, Connect, and Billing.
+            It's more than just regular notes.You can save your notes here as you learn. All notes about financial literacy in one place. Create notes, save it, re-read it. 
           </Feature>
 
           <Feature
-            title="Own your in-store experience"
+            title="Blogs related to personal finance & financial literacy"
             icon={
               <path
                 fillRule="evenodd"
@@ -104,14 +107,11 @@ export default function Features() {
               />
             }
           >
-            Provide a seamless customer experience across channels, like
-            reserving online and picking up in store. Our SDKs make it easy to
-            integrate into your own mobile and web applications to accept
-            in-store payments.
+            Provide a seamless reading experience for users. Blogs are crafted with love to provide users why financial literacy. What it is? Why it is important?
           </Feature>
 
           <Feature
-            title="Grow your platform’s revenue"
+            title="Market data in real time."
             icon={
               <path
                 strokeLinecap="round"
@@ -121,9 +121,7 @@ export default function Features() {
               />
             }
           >
-            Add in-person payments to your platform or marketplace. Using
-            Terminal with Connect, you can onboard users for online and
-            in-person payments, and unify their payouts across channels.
+            Learn how to see financial markets. Buy & sell assets in the financial markets virtually. Everything you need is in here.
           </Feature>
         </SimpleGrid>
       </Box>

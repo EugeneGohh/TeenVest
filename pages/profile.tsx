@@ -1,9 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   Box,
+  Stack,
+  HStack,
   Flex,
   Avatar,
-  HStack,
   Link,
   IconButton,
   Button,
@@ -12,18 +13,24 @@ import {
   MenuList,
   MenuItem,
   useDisclosure,
-  Stack,
   Spinner,
   Code,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { useUser, withPageAuthRequired } from "@auth0/nextjs-auth0";
+import DividerComponent from "../components/core/Divider";
+import DrawerComponent from "../components/core/Drawer";
 
-function Profile() {
+const Profile: FC<{
+  folders?: any[];
+  activeFolder?: any;
+  activeDoc?: any;
+  activeDocs?: any[];
+}> = ({ folders, activeDoc, activeFolder, activeDocs }) => {
   const { user, error, isLoading } = useUser();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const { name, picture } : any = user;
+  const { name, picture }: any = user;
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
@@ -79,9 +86,22 @@ function Profile() {
       <Box p={4}>
         Welcome back <Code>{name}</Code>!
       </Box>
+
+      <DividerComponent />
+      <DrawerComponent />
+
+      {/* <Tabs>
+        <DocumentPanel doc={activeDoc} />
+      </Tabs> */}
     </div>
   );
-}
+};
+
+/** Todos: Must handle all different page states.
+ *  1. Folders -> none selected /profile
+ *  2. Folders -> Folder selected /profile/id
+ *  3. Folders -> Folder selected -> Document selected  /app/id/id
+ */
 
 export default withPageAuthRequired(Profile, {
   onRedirecting: () => <Spinner size="xl" />,

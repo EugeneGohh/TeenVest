@@ -17,6 +17,6 @@
     "noImplicitThis": true,
     "strictNullChecks": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "graphql/server.js", "pages/api/auth/[...auth0].tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "graphql/server.js", "pages/api/auth/[...auth0].tsx", "db/connect.ts", "db/folder.ts", "db/doc.ts", "db/user.ts", "components/core/Editor.tsx"],
   "exclude": ["node_modules"]
 }
