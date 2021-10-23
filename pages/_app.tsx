@@ -15,7 +15,7 @@ const theme = extendTheme({ colors });
 export default function MyApp({ Component, pageProps }: AppProps) {
 
   return (
-    // Auth provider
+    // Auth0 provider
     <ChakraProvider theme={theme}>
       <UserProvider>
         <Component {...pageProps} />
