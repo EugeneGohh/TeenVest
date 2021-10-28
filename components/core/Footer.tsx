@@ -83,8 +83,8 @@ export default function Footer() {
             </Stack>
           </Stack>
           <Stack align="flex-start">
-            <ListHeader>Company</ListHeader>
-            <Link href="/">About us</Link>
+            {/* <ListHeader>Company</ListHeader>
+            <Link href="/">About us</Link> */}
           </Stack>
           <Stack align="flex-start">
             <ListHeader>Support</ListHeader>
