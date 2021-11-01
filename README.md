@@ -71,6 +71,7 @@ A list of features that has been implemented:
 - [x] Blog page
 - [x] User authentication and authorisation
 - [x] Protecting pages (Only authenticated users able to use TeenVest's features)
+- [x] Built a [mini CMS](https://github.com/EugeneGohh/TeenVest/blob/main/content.tsx) on my own.
 
 > NOTE: Blogs only appeared after user has signed in. Pages are protected.
 
