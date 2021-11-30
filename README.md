@@ -110,7 +110,7 @@ Twitter: [@\_eugenegoh](https://twitter.com/_eugenegoh)
 
 - [Next.js](https://nextjs.org/)
 - [Auth0](https://auth0.com/docs/)
-- [GraphQL](https://graphql.org/) > Using this soon...
+- [GraphQL](https://graphql.org/)
 - [MIT License](https://github.com/TeenVest/TeenVest/blob/main/LICENSE)
 
 <!-- MARKDOWN LINKS & IMAGES -->
